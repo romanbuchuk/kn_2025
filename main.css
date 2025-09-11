@@ -1,0 +1,21 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons .button {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background: white;
+}
+.buttons .button:hover {
+    cursor: pointer;
+}
+.buttons .button.add {
+    background: lightseagreen;
+}
+.buttons .button.reset {
+    background: darkred;
+    color: white;
+}

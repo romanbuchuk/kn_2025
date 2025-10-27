@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.list-item {
+  list-style: none;
+  background: #747bff;
+}

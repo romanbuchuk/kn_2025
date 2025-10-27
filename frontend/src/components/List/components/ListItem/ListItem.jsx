@@ -1,13 +1,17 @@
 import React from 'react';
 
-const List = ({ children }) => {
+import styles from './ListItem.module.css';
 
+const ListItem = ({ children }) => {
+    console.log('===================');
+    console.dir(styles);
+    console.log('===================');
 
     return (
-        <ul>
+        <li className={styles['list-item']}>
             {children}
-        </ul>
+        </li>
     );
 }
 
-export default List;
+export default ListItem;

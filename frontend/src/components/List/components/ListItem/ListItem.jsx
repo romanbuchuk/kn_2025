@@ -1,16 +1,13 @@
 import React from 'react';
 
-import styles from './ListItem.module.css';
+import * as SC from "./ListItem.styled";
 
-const ListItem = ({ children }) => {
-    console.log('===================');
-    console.dir(styles);
-    console.log('===================');
-
+const ListItem = ({ children, className }) => {
     return (
-        <li className={styles['list-item']}>
+        <SC.StyledListItem className={className}>
+            <SC.StyledPrefix> - </SC.StyledPrefix>
             {children}
-        </li>
+        </SC.StyledListItem>
     );
 }
 

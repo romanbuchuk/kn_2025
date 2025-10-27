@@ -7,6 +7,8 @@ import Button from './components/Button';
 import List from './components/List';
 import ListItem from './components/List/components/ListItem/index.js';
 
+import * as ListStyledComponents from './components/List/List.styled';
+
 function App() {
     const [count, setCount] = useState(0);
     const stylesRef = useRef({ backgroundColor: 'violet', border: '2px solid black' });
@@ -65,7 +67,7 @@ function App() {
          </List>
           <ol>
               <li className={styles['list-item']}>1</li>
-              <li>2</li>
+              <ListStyledComponents.StyledItemList>2</ListStyledComponents.StyledItemList>
               <li>3</li>
           </ol>
       </div>

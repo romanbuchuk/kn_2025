@@ -1,11 +1,11 @@
 import React from 'react';
 
 import * as SC from "./ListItem.styled";
+// import { TestContext } from '../../../../context/TestProvider/TestProvider.jsx';
 
-const ListItem = ({ children, className }) => {
+const ListItem = ({ children, className, completed }) => {
     return (
-        <SC.StyledListItem className={className}>
-            <SC.StyledPrefix> - </SC.StyledPrefix>
+        <SC.StyledListItem className={className} isCompleted={completed}>
             {children}
         </SC.StyledListItem>
     );

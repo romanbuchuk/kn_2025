@@ -1,16 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const StyledPrefix = styled.span`
-`;
 export const StyledListItem = styled.li`
     list-style: none;
-    background: #747bff;
+    background: ${({ theme }) => theme.colors.primary};
 
-    color: #f600e8;
+    color: ${({ theme }) => theme.color};
+
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    height: 100px;
+    width: 48%;
+    padding: 10px;
     
-    ${StyledPrefix} {
-        background: #f9f9f9;
-    }
+    justify-content: space-between;
+    align-items: center;
+    
+    ${({ isCompleted }) => isCompleted && css`
+        background: ${({ theme }) => theme.colors.secondary};
+    `};
 `;
-
 
